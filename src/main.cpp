@@ -11,19 +11,7 @@
 
 using std::cin, std::cout, std::string, std::string_view, std::vector;
 
-class TaskList {
-private:
-  string taskType{"?"};
-  vector<string> taskList{};
 
-public:
-  TaskList() {}
-  TaskList(string type) : taskType{type} {}
-  void add(string_view task) { taskList.push_back(static_cast<string>(task)); }
-  template <class Archive> void serialize(Archive &archive) {
-    archive(CEREAL_NVP(taskType), CEREAL_NVP(taskList));
-  }
-};
 
 string readUsingGetline() { return "idf\nsldf"; }
 
