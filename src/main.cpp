@@ -9,9 +9,8 @@
 #include <string_view>
 #include <vector>
 
+#include "task-list.h"
 using std::cin, std::cout, std::string, std::string_view, std::vector;
-
-
 
 string readUsingGetline() { return "idf\nsldf"; }
 
@@ -40,6 +39,5 @@ int main(int argc, char *argv[]) {
       cin >> conti;
     }
   }
-
   return 0;
 }

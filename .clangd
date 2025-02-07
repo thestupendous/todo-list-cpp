@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - "--include-direcotry=/home/ubun2/pro/cpp/todo-list/include"
+
+  CompilationDatabase: "cmake"

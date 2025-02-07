@@ -1,14 +1,12 @@
 #ifndef TASKLIST_H
 #define TASKLIST_H
-#include<string>
-#include<string>
 
+#include <cereal/cereal.hpp>
+#include <string>
+#include <vector>
+using std::string, std::vector, std::string_view;
 
 class TaskList {
-private:
-  string taskType{"?"};
-  vector<string> tasks{};
-
 public:
   TaskList() {}
   TaskList(string type) : taskType{type} {}
@@ -16,6 +14,12 @@ public:
   template <class Archive> void serialize(Archive &archive) {
     archive(CEREAL_NVP(taskType), CEREAL_NVP(tasks));
   }
+  void print() const;
+  void addTasks(const vector<string> &);
+
+private:
+  string taskType{"?"};
+  std::vector<string> tasks{};
 };
 
 #endif // !TASKLIST_H
