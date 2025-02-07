@@ -59,7 +59,7 @@ void write() {
   std::ofstream writeFS(mapFileName);
   if (writeFS.good()) {
     cereal::JSONOutputArchive oArchive(writeFS);
-    oArchive(cereal::make_nvp("task-objects", taskAll));
+    oArchive(taskAll);
   }
   writeFS.close();
   std::ofstream writeFS2(orderFileName);

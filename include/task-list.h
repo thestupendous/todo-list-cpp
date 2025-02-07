@@ -11,9 +11,13 @@ public:
   TaskList() {}
   TaskList(string type) : topic{type} {}
   void add(string_view task) { tasks.push_back(static_cast<string>(task)); }
+
+  #if 0
   template <class Archive> void serialize(Archive &archive) {
     archive(CEREAL_NVP(topic), CEREAL_NVP(tasks));
   }
+  #endif
+
   void print() const;
   void addTasks(const vector<string> &);
 
