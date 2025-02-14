@@ -1,3 +1,8 @@
+/*
+  compile -
+    gpp -I ../include/ operations.cpp task-list.cpp 
+*/
+
 #include <cereal/archives/json.hpp>
 #include <cereal/cereal.hpp>
 #include <cereal/types/map.hpp>
